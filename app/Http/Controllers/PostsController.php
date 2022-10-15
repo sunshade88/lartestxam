@@ -17,7 +17,7 @@ class PostsController extends Controller
     public function index()
     {
         return view('blog.index', [
-            'posts' => Post::orderby('id', 'desc')->get()
+            'posts' => Post::orderby('updated_at', 'desc')->get()
         ]);
     }
 
